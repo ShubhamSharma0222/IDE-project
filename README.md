@@ -1,2 +1,2 @@
-# ASSIGNMENT IDE PROJECT
-This is a project for the Institute of digital risk (IDE).
+# ASSIGNMENT IDR PROJECT
+This is a project for the Institute of digital risk (IDR)
