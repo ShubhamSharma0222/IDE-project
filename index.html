@@ -32,7 +32,7 @@ background:#0b0b0b;
 header{
 position:sticky;
 top:0;
-background:#000;
+background:#1d1c1c;
 border-bottom:1px solid #222;
 z-index:100;
 }
@@ -83,7 +83,7 @@ color:white;
 }
 
 .hero h1{
-font-size:42px;
+font-size:50px;
 margin-bottom:20px;
 }
 
@@ -93,28 +93,64 @@ margin:auto;
 margin-bottom:30px;
 }
 
-/* GLOW BUTTON */
+/* CYBER CTA BUTTON */
 
 .btn{
-background:#ff0000;
-color:white;
-padding:12px 25px;
+display:inline-block;
+padding:14px 32px;
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
 text-decoration:none;
-border-radius:4px;
-transition:0.3s;
-box-shadow:0 0 10px #ff0000;
+color:white;
+
+background:linear-gradient(45deg,#ff0000,#990000);
+border-radius:6px;
+
+transition:all .35s ease;
+
+box-shadow:
+0 0 10px #ff0000,
+0 0 20px rgba(255,0,0,0.6);
+
+position:relative;
+overflow:hidden;
 }
 
+/* hover */
+
 .btn:hover{
-background:#cc0000;
-box-shadow:0 0 25px #ff0000,0 0 40px #ff0000;
-transform:translateY(-2px);
+transform:translateY(-3px) scale(1.03);
+
+box-shadow:
+0 0 15px #ff0000,
+0 0 35px #ff0000,
+0 0 60px rgba(255,0,0,0.8);
+}
+
+/* glow pulse animation */
+
+.btn::before{
+content:"";
+position:absolute;
+top:-50%;
+left:-50%;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(255,0,0,0.35),transparent 60%);
+opacity:0;
+transition:.4s;
+}
+
+.btn:hover::before{
+opacity:1;
 }
 
 /* SECTIONS */
 
 section{
 padding:80px 10%;
+scroll-margin-top:100px;
 }
 
 h2{
@@ -239,11 +275,10 @@ background-position:40px 40px;
 /* NEON HEADING EFFECT */
 
 h1,h2,h3{
-color:#ff0000;
+color:#ff4040;
 text-shadow:
-0 0 5px #ff0000,
-0 0 10px #ff0000,
-0 0 20px #ff0000;
+0 0 3px rgba(255,0,0,0.6),
+0 0 8px rgba(255,0,0,0.4);
 }
 
 
@@ -362,7 +397,7 @@ box-shadow:0 0 10px #ff0000;
   <text x="120" y="55"
         font-family="Arial, Helvetica, sans-serif"
         font-size="28"
-        fill="#000"
+        fill="#ff6a00"
         font-weight="bold">
         Institute of
   </text>
@@ -409,7 +444,7 @@ through industry-led programs and real-world projects.
 <!-- ABOUT -->
 
 <section id="about">
-
+<div class="About">
 <h2>About IDR</h2>
 
 <p>
@@ -425,7 +460,7 @@ Through collaboration with universities and industry partners, IDR combines
 academic insight with practical experience to support organisations operating
 in regulated and high-consequence environments.
 </p>
-
+</div>
 </section>
 
 <!-- SERVICES -->
